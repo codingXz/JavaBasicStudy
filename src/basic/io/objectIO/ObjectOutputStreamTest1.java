@@ -1,41 +1,38 @@
 package io.objectIO;
 
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 /**
+ * objectOutputStream和objectInputStream进行对象的读入和写出
+ *
+ * 当readObject时里面的内容为空时会抛出一下异常
  * @Author: xzw
  * @Date: 2019/11/18
  */
 public class ObjectOutputStreamTest1 {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-//        writeObject();
+        try(ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream("c.txt"));
+            ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream("c.txt"))){
 
-//        readObject();
-        // 当需要循环使用contains方法的时候，使用hashSet的方法可以将原来的O(n)的时间复杂度变为O(1)
-        List<Object> list = new ArrayList<>();
-        list.contains("");
-        Set<Object> set = new HashSet<>();
-        set.contains("");
+            writeObject(objectOut);
+            readObject(objectIn);
+        }
+
     }
 
-    private static void readObject() throws IOException, ClassNotFoundException {
-        ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream("c.txt"));
+    private static void readObject(ObjectInputStream objectIn) throws IOException, ClassNotFoundException {
         Student o = (Student)objectIn.readObject();
         System.out.println(o);
     }
 
-    private static void writeObject() throws IOException {
+    private static void writeObject(ObjectOutputStream objectOut) throws IOException {
         Student xzw = new Student(10, "xzw");
-        ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream("c.txt"));
         objectOut.writeObject(xzw);
         System.out.println("写入对象成功");
     }

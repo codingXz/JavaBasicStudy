@@ -25,6 +25,8 @@ public class Tips1 {
 
 
     }
+
+    // 1在申明变量后进行初始化
     private static Map<String, Integer> map = new HashMap<String, Integer>(){
         {
             map.put("Leo",1);
@@ -32,14 +34,17 @@ public class Tips1 {
             map.put("Cold on the out side passionate on the inside",3);
         }
     };
-    private static List<String> list = new ArrayList<String>(){
-        {
-            list.add("Sagittarius");
-            list.add("Charming");
-            list.add("Perfectionist");
-        }
-    };
+
+    // 2通过静态代码块初始化
+    private static Map<String, Integer> map1 = new HashMap<>();
+    static {
+        map1.put("Leo",1);
+        map1.put("Family-loving",2);
+        map1.put("Cold on the out side passionate on the inside",3);
+    }
 
 
 
-}
+
+
+    }
