@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--xmlns ==> xml namespace xml命名空间-->
+
+<!--  对于命名空间的标识符, URI 的作用仅仅是保证唯一性， 它并不需要对应一个可以访问的资源或文件 ！
+ 但是， 有很多公司都会让 namespace 的 URI 指向一个包含该命名空间信息的网页 ，所以有的uri无法访问也是正常的-->
+
+<!--例如常常使用到的 pom.xml 文件 的头部：
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">-->
+
+<!--        xmlns:xsi ：一个默认的头部写法
+        xsi:schemaLocation ： 将命名空间对应的xsd文件关联上 uri .xsd(key 空格 value)-->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+
+
+</schema>

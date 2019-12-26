@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    引入dtd文件来约束xml文档
+    1.从网络上引入（格式如下）
+        文档类型 根节点 来自网络 dtd的名称  路径
+       <!DOCTYPE stus PUBLIC "//UNKNOWN" "UNKNOWN.dtd">
+    2.从本地引入
+        <!DOCTYPE stus SYSTEM "UNKNOWN.dtd">
+-->
+<!DOCTYPE stus SYSTEM "stus_dtd_test.dtd">
+<stus>
+    <stu id="10086" class="一班">
+        <name>张三</name>
+        <age>25</age>
+    </stu>
+    <stu id="10087" class="二班">
+        <name>张三</name>
+        <age>25</age>
+    </stu>
+</stus>

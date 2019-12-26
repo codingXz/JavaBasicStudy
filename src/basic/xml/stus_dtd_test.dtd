@@ -1,0 +1,15 @@
+
+<!--ELEMENT用来定义元素-->
+<!--   +:一个或多个 *:零个或多个  ?: 零个或一个 -->
+<!ELEMENT stus (stu+)>
+<!--(包含的其他标签)  其中的‘,’是有顺序规定的，使用'|' 表示两个中只能存在一个-->
+<!ELEMENT stu (name,age)>
+<!--#PCDATA代表的是普通文本 字符串-->
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+
+<!--ATTLIST用来定义标签中的属性-->
+        <!--哪个标签上 属性名 属性值类型 （表示[IMPLIED]可有/[REQUIRED]必须）-->
+<!ATTLIST  stu   id    CDATA   #IMPLIED>
+<!ATTLIST  stu   class    CDATA   #REQUIRED>
+

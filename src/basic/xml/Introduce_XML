@@ -1,0 +1,45 @@
+#这个文本介绍一下关于XML文档的基础知识
+
+一、XML的全称
+extensible mark language(扩展性标记语言)
+
+二、XML的作用
+1.用来保存数据
+2.用来做配置文件
+3.可以作为传输数据的载体（现在大部分已经被JSON取代）
+
+三、XML的标题头属性介绍
+例如<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+version="1.0" ==》解析xml文档的时候使用什么版本的解析器
+encoding="UTF-8" ==》解析文档时使用的编码方式
+standalone="no" ==》 为no时表示会与其他文档有关联关系 为yes时表示为独立文档
+
+四、XML中的标签可以自定义
+命名的规则如下：
+1.名称可以含字母数字和其他字符（不能包含空格）
+2.名称不能以数字和标点符合开始
+
+五、元素和属性的定义
+<stu></stu> ==>这是一个元素
+<stu id="10"></stu> ==>id即是一个属性
+
+六、非法字符
+在XML中'<','&'是非法的，如果要使用必须进行转义
+'<'     &lt;
+'&'     &amp;
+
+七、CDATA
+CDATA内部的所有东西都会被xml解析器忽略掉<![CDATA[具体内容（可能包括标签）]]>
+
+
+八、XML文档解析
+通用的解析方法包括：DOM　SAX
+DOM　（document object model）
+将数据全部加载到内存当中，生成dom树，可以简易的对文件进行增删改操作
+
+SAX（simple API for xml）基于事件驱动，读一行解析一行查找比较快，但不能进行增删，不会有内存不够的问题
+
+九、xml的约束文件
+包括 DTD（.dtd）
+Schema(.xsd)  就是一个xml文档，用来替代dtd文件
+具体的用法在有写到 'stus_dtd_test.dtd'中有写到
