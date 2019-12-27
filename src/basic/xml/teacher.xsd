@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--xmlns ==> xml namespace xml命名空间-->
 
+<!--====以下几列在使用的实列xml中的描述===-->
 <!--  对于命名空间的标识符, URI 的作用仅仅是保证唯一性， 它并不需要对应一个可以访问的资源或文件 ！
  但是， 有很多公司都会让 namespace 的 URI 指向一个包含该命名空间信息的网页 ，所以有的uri无法访问也是正常的-->
 
@@ -11,7 +11,43 @@
 <!--        xmlns:xsi ：一个默认的头部写法
         xsi:schemaLocation ： 将命名空间对应的xsd文件关联上 uri .xsd(key 空格 value)-->
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema">
 
+<!--====以下为.xsd的描述情况===-->
+<!--xmlns ==> xml namespace xml命名空间
+targetNamespace 对应在使用实例的命名空间上
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://xzw/JavaBasicStudy/teacher"
+        elementFormDefault="qualified">
 
-</schema>
+<xs:element name="teachers">
+    <xs:complexType>
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="teacher" type="twoel"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+    <!--设置内部元素-->
+    <xs:complexType name="twoel">
+        <xs:sequence>
+            <xs:element name="age" type="xs:int"/>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--设置属性-->
+    <xs:complexType name="type1">
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="class" type="xs:string"/>
+    </xs:complexType>
+
+<!--    <xs:element name="person" type="persontype"/>
+    <xs:complexType name="persontype">
+        <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>-->
+
+</xs:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--使用示例-->
+<teachers
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://xzw/JavaBasicStudy/teacher"
+        xsi:schemaLocation="http://xzw/JavaBasicStudy/teacher teacher.xsd"
+>
+
+    <teacher>
+        <name>张三</name>
+        <age>25</age>
+    </teacher>
+
+      <teacher>
+          <name>张三</name>
+          <age>25</age>
+      </teacher>
+
+</teachers>
+

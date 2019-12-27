@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    引入dtd文件来约束xml文档
+    引入dtd文件来约束xml文档==(一个xml文档中只能有一个dtd约束文件)
     1.从网络上引入（格式如下）
         文档类型 根节点 来自网络 dtd的名称  路径
        <!DOCTYPE stus PUBLIC "//UNKNOWN" "UNKNOWN.dtd">
