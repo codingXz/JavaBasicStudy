@@ -1,0 +1,18 @@
+tomcat的几种运行项目的方式？
+1. 直接将项目复制到Tomcat/webapps 的目录下面运行
+{在项目目录下的 每一个文件夹都被视为一个项目}
+
+2.通过在config/server.xml中的《Host》标签进行配置
+加入如下内容：
+    <context docBase="D:\projectName" path="\a"></context>
+    docBase:对应项目的具体路径
+    path:对应的虚拟路径 一定要以'/'开头
+    对应的访问方式：localhost:8080/a/restful
+
+3.配置虚拟路径
+在tomcat/conf/catalina/localhost/的文件夹下面新建一个xml文件
+例如 person.xml
+在这个文件中写到如下内容：
+    <?xml version="1.0" encoding="utf-8" ?>
+    <Context docBase="D:\projectName"></context>
+    对应的访问方式如下：localhost:8080/person(对应新建文件名)/restful
