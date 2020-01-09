@@ -12,6 +12,14 @@ public class Employee {
     private Integer age;
     private Integer salary;
 
+    public Employee() {
+    }
+
+    public Employee(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public Employee(String name, Integer age, Integer salary) {
         this.name = name;
         this.age = age;
