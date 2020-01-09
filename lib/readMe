@@ -1,0 +1,3 @@
+1. junit-4.10.jar + hamcrest-core-1.3.jar需要两个jar包组合才能使用Junit测试
+
+2. lombok的使用 注意：一、idea安装lombok插件 二、开始idea的注解编译 compiler -->Annotation processors  允许
