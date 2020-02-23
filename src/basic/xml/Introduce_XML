@@ -39,6 +39,13 @@ DOM　（document object model）
 
 SAX（simple API for xml）基于事件驱动，读一行解析一行查找比较快，但不能进行增删，不会有内存不够的问题
 
+具体的解决方案API有哪些？（1.Dom4j, 2.JDom , 3.jaxp sum自带的）
+在DOM4j中对两种方式都提供了，解决方案 =》SAXReader、DomReader
+步骤1、构建解析对象 SAXReader sax = new SAXReader()
+步骤2、指定解析文件  Document doc = sax.read(path\file\inputStream)
+步骤3、获取根节点 doc.getRootElement()
+步骤4、查询其他的节点信息
+
 九、xml的约束文件
 包括 DTD（.dtd）
 Schema(.xsd)  就是一个xml文档，用来替代dtd文件
